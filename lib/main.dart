@@ -28,28 +28,35 @@ class MyApp extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           themeMode: context.watch<ThemeModeCubit>().state.mode,
           theme: ThemeData(
+
             textTheme: const TextTheme(
               displayLarge: TextStyle(
                 color: kPrimaryBrightTextColor,
                 fontWeight: FontWeight.bold,
-                fontSize: 18
+                fontSize: 24
               ),
               displayMedium: TextStyle(
                   color: kPrimaryBrightTextColor,
                   fontWeight: FontWeight.w500,
-                  fontSize: 16
+                  fontSize: 18
               ),
               displaySmall: TextStyle(
                   color: kPrimaryBrightTextColor,
                   fontWeight: FontWeight.normal,
-                  fontSize: 14
+                  fontSize: 15
+              ),
+              bodySmall: TextStyle(
+                  color: kUnselectedIconColor,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500
               )
             ),
             iconTheme: const IconThemeData(
-              color: kBrightSelectedIconColor
+              color: kUnselectedIconColor
             ),
             scaffoldBackgroundColor: kScaffoldBrightColor,
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -60,31 +67,45 @@ class MyApp extends StatelessWidget {
               unselectedIconTheme: IconThemeData(
                 color: kUnselectedIconColor
               )
-            )
+            ),
+            inputDecorationTheme: const InputDecorationTheme(
+              fillColor: Color(0xCCe9e9e9),
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
 
+              )
+            ),
+            colorScheme: const ColorScheme.light(primary: kUnselectedIconColor)
           ),
           darkTheme: ThemeData(
-              textTheme: const TextTheme(
+              textTheme:  const TextTheme(
                   displayLarge: TextStyle(
                       color: kPrimaryDarkTextColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18
+                      fontSize: 24
                   ),
                   displayMedium: TextStyle(
                       color: kPrimaryDarkTextColor,
                       fontWeight: FontWeight.w500,
-                      fontSize: 16
+                      fontSize: 18
                   ),
                   displaySmall: TextStyle(
                       color: kPrimaryDarkTextColor,
                       fontWeight: FontWeight.normal,
-                      fontSize: 14
+                      fontSize: 15
+                  ),
+                  bodySmall: TextStyle(
+                    color: kUnselectedIconColor,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500
                   )
+
+
               ),
               iconTheme: const IconThemeData(
-                  color: kDarkSelectedIconColor
+                  color: kUnselectedIconColor
               ),
-
             scaffoldBackgroundColor: kScaffoldDarkColor,
               bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                   backgroundColor: kDarkBottomNavigationBarColor,
@@ -94,8 +115,16 @@ class MyApp extends StatelessWidget {
                   unselectedIconTheme: IconThemeData(
                       color: kUnselectedIconColor
                   )
-              )
+              ),
+              inputDecorationTheme: const  InputDecorationTheme(
+                  fillColor: Color(0x27e9e9e9),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                  ),
 
+              ),
+              colorScheme: const ColorScheme.dark(primary: Color(0xff4f5668)),
           ),
           home: const HomePage(),
           // home: const HomePage(path: "/storage/emulated/0/Music/Imagine Dragons - Sharks (Official Lyric Video).mp3"),
