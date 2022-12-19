@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:music_player/pages/home.dart';
 import 'package:music_player/services/theme_mode_cubit.dart';
 
@@ -64,7 +63,6 @@ class MyApp extends StatelessWidget {
                   fontFamily: "sf pro rounded"
 
               ),
-
             ),
             iconTheme: const IconThemeData(
               color: kUnselectedIconColor
@@ -87,7 +85,8 @@ class MyApp extends StatelessWidget {
 
               )
             ),
-            colorScheme: const ColorScheme.light(primary: kUnselectedIconColor)
+            colorScheme: const ColorScheme.light(primary: kUnselectedIconColor),
+            primaryColor: Colors.black
           ),
           darkTheme: ThemeData(
               textTheme:  const TextTheme(
@@ -148,6 +147,7 @@ class MyApp extends StatelessWidget {
 
               ),
               colorScheme: const ColorScheme.dark(primary: Color(0xff4f5668)),
+              primaryColor: Colors.white
           ),
           home: const HomePage(),
           // home: const HomePage(path: "/storage/emulated/0/Music/Imagine Dragons - Sharks (Official Lyric Video).mp3"),

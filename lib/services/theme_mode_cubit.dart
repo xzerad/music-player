@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
-
 part 'theme_mode_state.dart';
 
 class ThemeModeCubit extends Cubit<ThemeModeState> {

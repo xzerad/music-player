@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ButtonCircularSplash extends StatelessWidget {
   const ButtonCircularSplash({Key? key, required this.icon, this.onPress}) : super(key: key);
   final void Function()? onPress;
-  final Icon icon;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) {
