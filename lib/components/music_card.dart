@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/constants.dart';
 
-class MusicCard extends StatelessWidget {
-  const MusicCard({Key? key, required this.imageAsset, required this.trackName,
-    required this.artistName}) : super(key: key);
+import '../models/music.dart';
 
-  final String imageAsset, trackName, artistName;
+class MusicCard extends StatelessWidget {
+  const MusicCard({Key? key, required this.music, required this.prefix}) : super(key: key);
+  final String prefix;
+  final Music music;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,9 +18,13 @@ class MusicCard extends StatelessWidget {
           children: [
             Stack(
               children: [
-                  ClipRRect(
-                     borderRadius: const BorderRadius.all(Radius.circular(15)),
-                      child: Image.asset(imageAsset)),
+                  Hero(
+                    tag: "$prefix${music.id}",
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.all(Radius.circular(15)),
+                      child: Image.asset(music.asset),
+                    ),
+                  ),
                   const Positioned(
                       bottom: 10,
                       right: 10,
@@ -30,8 +35,8 @@ class MusicCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 5,),
-            Text(trackName, style: Theme.of(context).textTheme.displaySmall,),
-            Text(artistName, style: Theme.of(context).textTheme.bodySmall,)
+            Text(music.title, style: Theme.of(context).textTheme.displaySmall,),
+            Text(music.artist, style: Theme.of(context).textTheme.bodySmall,)
           ],
         ),
       ),
