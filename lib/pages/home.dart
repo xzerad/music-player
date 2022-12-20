@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:music_player/components/button_circular_splash.dart';
 import 'package:music_player/pages/home/favorite_body.dart';
 import 'package:collection/collection.dart';
+import 'home/account_body.dart';
 import 'home/home_body.dart';
 import 'home/music_body.dart';
 
@@ -19,8 +20,7 @@ class _HomePageState extends State<HomePage> {
     HomeBody(),
     MusicBody(),
     FavoriteBody(),
-    FavoriteBody(),
-
+    AccountBody(),
   ];
 
   int selectedPage = 0;

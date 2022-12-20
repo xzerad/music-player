@@ -109,26 +109,8 @@ class MusicBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10,),
 
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      child: const Icon(Icons.shield_moon_outlined), onPressed: (){
-                      context.read<ThemeModeCubit>().setDarkMode();
-                    },
-                    ),
-                    ElevatedButton(
-                      child: const Icon(Icons.sunny), onPressed: (){
-                      context.read<ThemeModeCubit>().setBrightMode();
-                    },
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 140,)
+              const SizedBox(height: 150,)
             ],
           ),
         ),
