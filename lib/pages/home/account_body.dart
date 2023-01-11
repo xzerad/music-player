@@ -58,10 +58,10 @@ class _AccountBodyState extends State<AccountBody> {
                             });
                       }),
                     ),
-                    AccountOptionButton(icon: Icon(Icons.supervisor_account_rounded, color: Colors.white, size: 30,), title: "Edit profile",),
-                    AccountOptionButton(icon: Icon(Icons.language, color: Colors.white, size: 30,), title: "Change language",),
-                    AccountOptionButton(icon: Icon(Icons.devices_rounded, color: Colors.white, size: 30,), title: "My devices",),
-                    AccountOptionButton(icon: Icon(Icons.delete_outline_rounded, color: Colors.white, size: 30,), title: "Delete Account",)
+                    const AccountOptionButton(icon: Icon(Icons.supervisor_account_rounded, color: Colors.white, size: 30,), title: "Edit profile",),
+                    const AccountOptionButton(icon: Icon(Icons.language, color: Colors.white, size: 30,), title: "Change language",),
+                    const AccountOptionButton(icon: Icon(Icons.devices_rounded, color: Colors.white, size: 30,), title: "My devices",),
+                    const AccountOptionButton(icon: Icon(Icons.delete_outline_rounded, color: Colors.white, size: 30,), title: "Delete Account",)
 
                   ],
                 ),

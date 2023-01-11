@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/constants.dart';
 
 class MusicListTile extends StatelessWidget {
   const MusicListTile({Key? key}) : super(key: key);

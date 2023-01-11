@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:music_player/components/search_bar.dart';
 
 import '../../components/music_card.dart';
@@ -8,7 +7,6 @@ import '../../components/selected_music_card.dart';
 import '../../configurations/no_scroll_indication.dart';
 import '../../models/music.dart';
 import '../../music_list.dart';
-import '../../services/theme_mode_cubit.dart';
 import '../music_player.dart';
 
 class HomeBody extends StatelessWidget {
